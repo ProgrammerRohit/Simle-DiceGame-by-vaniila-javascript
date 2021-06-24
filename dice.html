@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Sharma">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .edit{
+            font-size: 30px;
+            text-decoration: none;
+            color:white;
+            background-color: black;
+            border: 2px solid red;
+            display: inline-block;
+            padding: 15px;
+            margin-top: 55px;
+            margin-left: 600px;
+            transition: transform .5s;
+        }
+        .edit:hover{
+            background-color: red;
+            border: 2px solid black;
+            transform: scale(1.5);
+        }
+       #result{
+           margin-left: 600px;
+           margin-top: 50px;
+       }
+    </style>
+</head>
+<body>
+    <a href="javascript:void(0)" onclick="roll()" class="edit">Roll It</a>
+    <div id="result"></div>
+    <script>
+   function roll(){
+       document.getElementById("result").innerHTML="<img src='image/loader.gif'>";
+       setTimeout(function(){
+        var a = Math.floor(Math.random()*6)+1;
+        document.getElementById("result").innerHTML="<img src='image/"+a+".png'>";
+    },3000);
+}
+        
+    </script>
+
+</body>
+</html>
